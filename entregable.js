@@ -10,7 +10,7 @@ let dos = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar"));
 
 if (dos == 1)
 {
-    for (u = 1; u <= 10; u++)
+    for (u = 1; u <= 100; u++)
      {
         let usuario = u;
         usuario = prompt("Nombre y Apellido");
@@ -21,17 +21,14 @@ if (dos == 1)
             console.log("fin del registro");
             break;
         }   
-        console.log(nombres);
+        console.log(<list>nombres</list>);
     }   
 }
 else if(dos == 2)
 {
-
-    let borrar = parseInt(prompt("elige numero segun registro",));
-    prompt(nombres)
+    let borrar = parseInt(prompt("elige  numero segun registro"));
     if(borrar == 0)
     {
-
         console.log(nombres[1]);
         console.log(nombres[2]);
         console.log("elemento: ",nombres[0], "eliminado")
@@ -40,17 +37,16 @@ else if(dos == 2)
     {
         console.log(nombres[0]);
         console.log(nombres[2]);
-        console.log("elemento: ",nombres[1], "eliminado")
+        console.log("elemento: ",nombres[0], "eliminado")
     }
     if(borrar == 2)
     {
         console.log(nombres[0]);
         console.log(nombres[1]);
-        console.log("elemento: ",nombres[2], "eliminado")
+        console.log("elemento: ",nombres[0], "eliminado")
     }
-    if (borrar === null) {
-        console.log("Operación cancelada por el usuario.");
-        console.log("fin del registro");
-    } 
-    
+    if (borrar > 2)
+    {
+        console.log("registro no encontrado");
+    }
 }
