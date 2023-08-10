@@ -1,4 +1,4 @@
-let nombres = 
+let nombres =
 [
     "jesus ramirez",
     "daniela dorado",
@@ -21,35 +21,46 @@ if (dos == 1)
             console.log("fin del registro");
             break;
         }   
-        console.log(nombres);
+        console.log(nombres.join("-"));
     }   
 }
 else if(dos == 2)
 {
+    let borrar = prompt("registro a borrar", nombres);
 
-    let borrar = parseInt(prompt("elige numero segun registro",));
-    prompt(nombres)
-    if(borrar == 0)
+    if(borrar == nombres[0])
     {
 
         console.log(nombres[1]);
         console.log(nombres[2]);
-        console.log("elemento: ",nombres[0], "eliminado")
+        console.log("elemento:",nombres[0], "eliminado")
     }
-    if(borrar == 1)
+    if(borrar == nombres[1])
     {
         console.log(nombres[0]);
         console.log(nombres[2]);
-        console.log("elemento: ",nombres[1], "eliminado")
+        console.log("elemento:",nombres[1], "eliminado")
     }
-    if(borrar == 2)
+    if(borrar == nombres[2])
     {
         console.log(nombres[0]);
         console.log(nombres[1]);
-        console.log("elemento: ",nombres[2], "eliminado")
+        console.log("elemento:",nombres[2], "eliminado")
     }
-    if (borrar === null) {
-        console.log("Operación cancelada por el usuario.");
+    if(borrar !== nombres[0] )
+    {
+        console.log("Registro no encontrado");
+
+    } 
+    if(borrar !== nombres[1] )
+    {
+
+        console.log("Operación cancelad")
+
+    } 
+    if(borrar !== nombres[2] )
+    {
+
         console.log("fin del registro");
     } 
     
