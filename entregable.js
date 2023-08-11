@@ -1,4 +1,4 @@
-let nombres = 
+/* let nombres = 
 [
     "jesus ramirez",
     "daniela dorado",
@@ -8,7 +8,7 @@ let nombres =
 
 let dos = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar"));
 
-if (dos == 1)
+if (dos === 1)
 {
     for (u = 1; u <= 100; u++)
      {
@@ -21,32 +21,38 @@ if (dos == 1)
             console.log("fin del registro");
             break;
         }   
-        console.log(<list>nombres</list>);
+        console.log(nombres);
     }   
 }
 else if(dos == 2)
 {
-    let borrar = parseInt(prompt("elige  numero segun registro"));
+    
+    alert("nombres registrados: ");
+    alert(nombres);
+    let borrar = parseInt(prompt("seleciones numero segun registro"));
+
     if(borrar == 0)
-    {
-        console.log(nombres[1]);
-        console.log(nombres[2]);
-        console.log("elemento: ",nombres[0], "eliminado")
-    }
+        {
+            console.log(nombres[1]);
+            console.log(nombres[2]);
+            console.log("elemento: ",nombres[0], "eliminado")
+        }
     if(borrar == 1)
-    {
-        console.log(nombres[0]);
-        console.log(nombres[2]);
-        console.log("elemento: ",nombres[0], "eliminado")
-    }
+        {
+            console.log(nombres[0]);
+            console.log(nombres[2]);
+            console.log("elemento: ",nombres[1], "eliminado")
+        }
     if(borrar == 2)
-    {
-        console.log(nombres[0]);
-        console.log(nombres[1]);
-        console.log("elemento: ",nombres[0], "eliminado")
-    }
-    if (borrar > 2)
-    {
-        console.log("registro no encontrado");
-    }
+        {
+            console.log(nombres[0]);
+            console.log(nombres[1]);
+            console.log("elemento: ",nombres[2], "eliminado")
+        }
+    if(borrar > 3)
+        {
+            console.log("registro no encontrado");
+        }
 }
+
+ */
