@@ -1,58 +1,100 @@
-/* let nombres = 
-[
-    "jesus ramirez",
-    "daniela dorado",
-    "alejandro ruiz",
-]
+let usuari =
+    [
+        "jesus ",
+        "daniela ",
+        "camila ",
+    ]
+let Apellidos =
+    [
+        "ramirez",
+        "dorado",
+        "ruiz"
+    ]
+let id =
+    [
+        0,
+        1,
+        2
+    ]
+let telefonos =
+    [
+        123,
+        456,
+        789
+    ]
+let Ubicaciones=
+    [
+        "colombia",
+        "Argentina",
+        "Brasil"
+    ]
 
+alert("numero de usuarios registrados: "+  id.length)
 
-let dos = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar"));
-
-if (dos === 1)
+function modificarLista ()
 {
-    for (u = 1; u <= 100; u++)
-     {
-        let usuario = u;
-        usuario = prompt("Nombre y Apellido");
-        nombres.push(usuario)
-        
-        if (usuario === null) {
-            console.log("Operación cancelada por el usuario.");
-            console.log("fin del registro");
-            break;
-        }   
-        console.log(nombres);
-    }   
-}
-else if(dos == 2)
+    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar" ));
+ 
+ if (elegir === 1)
+    {
+        for (u = 1; u <= 10; u++)
+        {
+            nombre = prompt("Cual es tu nombre");
+            usuari.push(nombre);
+
+            apellido = prompt("Cual es tu apellido");
+            Apellidos.push(apellido);
+
+            idU = prompt("Cual es tu id");
+            id.push(idU)
+
+            telefono = prompt("Cual es tu telefono");
+            telefonos.push(telefono);
+
+            ubicacion = prompt("Cual es tu ubicacion");
+            Ubicaciones.push(ubicacion);
+
+            cancelar = prompt("para agrgar dar aceptar para finalizar dar cancelar ")
+
+                                                     
+            if (nombre, Apellidos, idU, telefono, ubicacion, cancelar === null) 
+                    {
+                        console.log("Operación cancelada por el usuario.");
+                        console.log("fin del registro");
+                        break;
+                    }   
+        }
+        // Ver usuarios
+
+        let a = parseInt(prompt("id de usuario registrado"));
+
+        console.log("nombre: ",usuari[a],"apellido: ", Apellidos[a],"id: ", id[a],"telefono: ", telefonos[a],"ubicacion: ",Ubicaciones[a])
+
+        // Ver usuarios predeterminados
+    }
+
+ 
+
+if (elegir == 2)
 {
+    let b = parseInt(prompt("id de usuario que va a  borrar"));
+
+    // Ver usuarios
+
+     console.log("informacion de usuario borrado \n nombre: ",usuari[b],"apellido: ", Apellidos[b],"id: ", id[b],"telefono: ", telefonos[b],"ubicacion: ",Ubicaciones[b])
     
-    alert("nombres registrados: ");
-    alert(nombres);
-    let borrar = parseInt(prompt("seleciones numero segun registro"));
+    // Ver usuarios predeterminados
 
-    if(borrar == 0)
-        {
-            console.log(nombres[1]);
-            console.log(nombres[2]);
-            console.log("elemento: ",nombres[0], "eliminado")
-        }
-    if(borrar == 1)
-        {
-            console.log(nombres[0]);
-            console.log(nombres[2]);
-            console.log("elemento: ",nombres[1], "eliminado")
-        }
-    if(borrar == 2)
-        {
-            console.log(nombres[0]);
-            console.log(nombres[1]);
-            console.log("elemento: ",nombres[2], "eliminado")
-        }
-    if(borrar > 3)
-        {
-            console.log("registro no encontrado");
-        }
+    usuari.pop(b);
+    Apellidos.pop(b);
+    id.pop(b)
+    telefonos.pop(b);
+    Ubicaciones.pop(b);
+
 }
 
- */
+
+alert("numero de usuarios registrados: "+  id.length);
+
+}
+setInterval(modificarLista, 1000);
