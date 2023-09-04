@@ -2,7 +2,7 @@ let usuari =
     [
         "jesus ",
         "daniela ",
-        "camila ",
+        "camila "
     ]
 let Apellidos =
     [
@@ -10,7 +10,7 @@ let Apellidos =
         "dorado",
         "ruiz"
     ]
-let id =
+let id  =
     [
         0,
         1,
@@ -28,12 +28,14 @@ let Ubicaciones=
         "Argentina",
         "Brasil"
     ]
+    
+alert("numero de usuario a registrar: "+  id.length)
 
-alert("numero de usuarios registrados: "+  id.length)
-
-function modificarLista ()
+for (empezar = 1; empezar <= 100; empezar++)
 {
-    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar" ));
+    function modificarLista ()
+{
+    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar \n 3 para modificar" ));
  
  if (elegir === 1)
     {
@@ -54,7 +56,7 @@ function modificarLista ()
             ubicacion = prompt("Cual es tu ubicacion");
             Ubicaciones.push(ubicacion);
 
-            cancelar = prompt("para agrgar dar aceptar para finalizar dar cancelar ")
+            cancelar = prompt("para agregar dar aceptar para finalizar dar cancelar ")
 
                                                      
             if (nombre, Apellidos, idU, telefono, ubicacion, cancelar === null) 
@@ -93,8 +95,35 @@ if (elegir == 2)
 
 }
 
+if (elegir == 3)
+{
+    let M = parseInt(prompt("id del usuario que quiere modificar"));
 
-alert("numero de usuarios registrados: "+  id.length);
+    nombre1 = prompt("Cual es tu nombre");
+    usuari[M] = nombre1;
+
+    apellido1 = prompt("Cual es tu apellido");
+    Apellidos[M] = apellido1;
+
+    telefono1 = prompt("Cual es tu telefono");
+    telefonos[M] = telefono1 
+
+    ubicacion1 = prompt("Cual es tu ubicacion");
+    Ubicaciones[M] = ubicacion1;
+
+    console.log("informacion de usuario Modificado \n nombre: ",usuari[M],"apellido: ", Apellidos[M],"id: ", id[M],"telefono: ", telefonos[M],"ubicacion: ",Ubicaciones[M])
 
 }
-setInterval(modificarLista, 1000);
+
+if (elegir == null)
+{
+    empezar = 100;
+}
+
+alert("Siguiente ID a registrar: "+  id.length);
+
+}
+modificarLista()
+}
+
+
