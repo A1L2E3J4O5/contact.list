@@ -35,7 +35,7 @@ for (empezar = 1; empezar <= 100; empezar++)
 {
     function modificarLista ()
 {
-    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar \n 3 para modificar" ));
+    let elegir = parseInt(prompt("elige \n 1 para agregar \n 2 para eliminar" ));
  
  if (elegir === 1)
     {
@@ -95,25 +95,6 @@ if (elegir == 2)
 
 }
 
-if (elegir == 3)
-{
-    let M = parseInt(prompt("id del usuario que quiere modificar"));
-
-    nombre1 = prompt("Cual es tu nombre");
-    usuari[M] = nombre1;
-
-    apellido1 = prompt("Cual es tu apellido");
-    Apellidos[M] = apellido1;
-
-    telefono1 = prompt("Cual es tu telefono");
-    telefonos[M] = telefono1 
-
-    ubicacion1 = prompt("Cual es tu ubicacion");
-    Ubicaciones[M] = ubicacion1;
-
-    console.log("informacion de usuario Modificado \n nombre: ",usuari[M],"apellido: ", Apellidos[M],"id: ", id[M],"telefono: ", telefonos[M],"ubicacion: ",Ubicaciones[M])
-
-}
 
 if (elegir == null)
 {
